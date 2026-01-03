@@ -17,13 +17,11 @@ var addCmd = &cobra.Command{
 	Run: func(cmd *cobra.Command, args []string) {
 		if len(args) < 3 {
 			fmt.Println("Not enough arguments for [ add ] command.")
+			fmt.Println("command: dinar add <item name> <price> <quantity>")
 			return
 		} else if len(args) > 3 {
 			fmt.Println("Too many arguments for [ add ] command.")
-			return
-		}
-		if args[0] == " " || args[1] == " " || args[2] == " " {
-			fmt.Println("Empty values are not allowed.")
+			fmt.Println("command: dinar add <item name> <price> <quantity>")
 			return
 		}
 		items, err := pkg.DecodeJSON()

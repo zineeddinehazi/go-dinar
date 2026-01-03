@@ -13,14 +13,14 @@ var clearCmd = &cobra.Command{
 	Use:   "clear",
 	Short: "Clear the entire list",
 	Long:  `Clear evry item on the expense list.`,
-
 	Run: func(cmd *cobra.Command, args []string) {
 		if len(args) > 0 {
 			fmt.Println("Too many arguments for [ clear ] command.")
+			fmt.Println("command: dinar clear")
 			return
 		}
 		var answer string
-		fmt.Print("Are you sure ? (Y) Yes / (N) No : ")
+		fmt.Print("Are you sure ? y (Yes)/ n (No) : ")
 		fmt.Scanf("%s", &answer)
 		if strings.ToLower(answer) == "n" {
 			fmt.Println("Operation cancelled by the user.")

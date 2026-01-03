@@ -16,13 +16,11 @@ var updateCmd = &cobra.Command{
 	Run: func(cmd *cobra.Command, args []string) {
 		if len(args) < 4 {
 			fmt.Println("Not enough arguments for [ update ] command.")
+			fmt.Println("command: dinar update <item ID> <new item name> <new price> <new quantity>")
 			return
 		} else if len(args) > 4 {
 			fmt.Println("Too many arguments for [ update ] command.")
-			return
-		}
-		if args[0] == " " || args[1] == " " || args[2] == " " || args[3] == " " {
-			fmt.Println("Empty values are not allowed.")
+			fmt.Println("command: dinar update <item ID> <new item name> <new price> <new quantity>")
 			return
 		}
 		items, err := pkg.DecodeJSON()

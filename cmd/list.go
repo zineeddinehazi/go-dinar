@@ -17,6 +17,7 @@ var listCmd = &cobra.Command{
 	Run: func(cmd *cobra.Command, args []string) {
 		if len(args) > 0 {
 			fmt.Println("Too many arguments for [ list ] command.")
+			fmt.Println("command: dinar list")
 			return
 		}
 		items, err := pkg.DecodeJSON()

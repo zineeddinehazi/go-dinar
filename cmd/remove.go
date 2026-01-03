@@ -14,13 +14,11 @@ var removeCmd = &cobra.Command{
 	Run: func(cmd *cobra.Command, args []string) {
 		if len(args) < 1 {
 			fmt.Println("Not enough arguments for [ remove ] command.")
+			fmt.Println("command: dinar remove <item ID>")
 			return
 		} else if len(args) > 1 {
 			fmt.Println("Too many arguments for [ remove ] command.")
-			return
-		}
-		if args[0] == " " {
-			fmt.Println("Empty values are not allowed.")
+			fmt.Println("command: dinar remove <item ID>")
 			return
 		}
 		items, err := pkg.DecodeJSON()
