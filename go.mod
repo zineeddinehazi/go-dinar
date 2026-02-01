@@ -1,4 +1,4 @@
-module example/go-dinar
+module example/dinar
 
 go 1.25.5
 
