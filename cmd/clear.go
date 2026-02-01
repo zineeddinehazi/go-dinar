@@ -1,7 +1,7 @@
 package cmd
 
 import (
-	"example/go-dinar/pkg"
+	"example/dinar/pkg"
 	"fmt"
 	"os"
 	"strings"
