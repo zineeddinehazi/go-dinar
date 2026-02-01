@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"example/go-dinar/pkg"
+	"example/dinar/pkg"
 
 	"github.com/spf13/cobra"
 
